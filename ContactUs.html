@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact Us </title>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+	<section>
+		
+		<div class="container">
+			<div class="contactInfo">
+                <div>
+
+                	<h3>Contact Us</h3>
+                	
+                	<ul class="info">
+                		<li>
+                			<span><img src="images/location.png"></span>
+                			<span>DAROGA MARKET BHITTHI BAZAR SIWAN</span>
+                		</li>
+                		<li>
+                			<span><img src="images/mail.png"></span>
+                			<span>Ourctscomputer@gmail.com</span>
+                			
+                		</li>
+                		<li>
+                			<span><img src="images/call.png"></span>
+                			<span>All payment no.{Phonepay,Gpay,Paytm}
+                				9973981966 
+                			</span>
+                		</li>
+                	</ul>
+                </div>
+                <ul class="sci">
+                	<li><a href="#"><img src="images/1.png"></a></li>
+                	<li><a href="https://twitter.com/CTSCOMPUTER1"><img src="images/2.png"></a></li>
+                	<li><a href="https://www.instagram.com/ctscomputertrainingcenter/"><img src="images/3.png"></a></li>
+                	<li><a href="#"><img src="images/4.png"></a></li>
+                	<li><a href="#"><img src="images/5.png"></a></li>
+
+                </ul>
+				
+			</div>
+			<div class="contactForm">
+				<form method="post" autocomplete="off" name="google-sheet">
+				<h2>Send here information for any services</h2> <h5>Warning in Mobile: Please Open With Desktop Mode</h5>
+				<div class="formBox">
+					<div class="inputBox w50">
+						<input type="text" name="name" class="form-control" required>
+						<span>Enter Your Name</span>
+
+					</div>
+					<div class="inputBox w50">
+						<input type="text" name="phone" class="form-control" required>
+						<span>Enter Your Phone number</span>
+
+					</div>
+					<div class="inputBox w50">
+						<input type="email" name="email" class="form-control" required>
+						<span>Enter Your Email-Id</span>
+
+					</div>
+					<div class="inputBox w100">
+						<textarea required class="form-control" name="msg"></textarea>
+						<span>Write your message here......</span>
+
+					</div>
+					<div class="inputBox w100">
+					<input type="submit" value="send">	
+					</div>
+				</div>
+
+         </form>
+			</div>
+		
+		</div>
+
+
+
+
+	</section>
+       <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzz_z5o6iSk0UN7zKuarv1w05nvn_wNIJMXm5erMYS3glAby-smgBCVVVMWkep8feVCwg/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+</body>
+</html>
